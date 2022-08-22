@@ -5,7 +5,7 @@ Config.LockNPCDrivingCars = true -- Lock state for NPC cars being driven by NPCs
 Config.LockNPCParkedCars = true -- Lock state for NPC parked cars [true = locked, false = unlocked]
 
 -- Lockpick Settings
-Config.RemoveLockpickNormal = 0.5 -- Chance to remove lockpick on fail
+Config.RemoveLockpickNormal = 0.7 -- Chance to remove lockpick on fail
 Config.RemoveLockpickAdvanced = 0.2 -- Chance to remove advanced lockpick on fail
 Config.LockPickDoorEvent = function() -- This function is called when a player attempts to lock pick a vehicle
     TriggerEvent('qb-lockpick:client:openLockpick', LockpickFinishCallback)
@@ -28,19 +28,19 @@ Config.CarjackChance = {
 }
 
 -- Hotwire Settings
-Config.HotwireChance = 0.5 -- Chance for successful hotwire or not
-Config.TimeBetweenHotwires = 5000 -- Time in ms between hotwire attempts
-Config.minHotwireTime = 20000 -- Minimum hotwire time in ms
-Config.maxHotwireTime = 40000 --  Maximum hotwire time in ms
+Config.HotwireChance = 0.8 -- Chance for successful hotwire or not
+Config.TimeBetweenHotwires = 4000 -- Time in ms between hotwire attempts
+Config.minHotwireTime = 15000 -- Minimum hotwire time in ms
+Config.maxHotwireTime = 35000 --  Maximum hotwire time in ms
 
 -- Police Alert Settings
 Config.AlertCooldown = 10000 -- 10 seconds
-Config.PoliceAlertChance = 0.75 -- Chance of alerting police during the day
-Config.PoliceNightAlertChance = 0.50 -- Chance of alerting police at night (times:01-06)
+Config.PoliceAlertChance = 1.75 -- Chance of alerting police during the day
+Config.PoliceNightAlertChance = 1.50 -- Chance of alerting police at night (times:01-06)
 
 -- These vehicles cannot be jacked
 Config.ImmuneVehicles = {
-    'stockade'
+    'stockade', 'riot', 'polmav', 'dump'
 }
 
 -- These vehicles will never lock
